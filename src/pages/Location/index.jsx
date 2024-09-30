@@ -1,9 +1,13 @@
+import Header from "../../components/Header"
+
+
+
 function Location() {
     return (
      
-            <h1>
-              Location
-              </h1>
+            <div>
+              <Header />
+            </div>
     )
   }
   

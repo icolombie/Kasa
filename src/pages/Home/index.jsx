@@ -1,10 +1,12 @@
+import Header from "../../components/Header"
+
 function Home() {
     return (
-     
-            <h1>
-              Chez vous, partout et ailleurs
-              talents
-              </h1>
+        
+        <div>
+          <Header />
+            <h1>Chez vous, partout et ailleurs</h1>
+        </div>
     )
   }
   
