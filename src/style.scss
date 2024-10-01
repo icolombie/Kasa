@@ -12,6 +12,12 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
 
 
 
@@ -170,3 +176,22 @@ nav a {
             }
         }
 
+.card {
+    width: 340px;
+    height: 340px;
+    border-radius: 10px 10px 10px 10px;
+    background: linear-gradient(180deg, rgb(255, 96, 96,1), rgba(207, 12, 12, 0.877) 42%, rgb(222, 91, 91) 99.99%, rgba(166, 79, 79, 0.5) 100%);
+    
+        &_title {
+            font-family: Montserrat;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 26px;
+            text-align: left;
+            color:rgba(255, 255, 255, 1);
+            padding-right: 200px;
+            padding-top: 268px;
+            padding-left: 20px;
+        }
+
+}
