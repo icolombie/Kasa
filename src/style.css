@@ -13,7 +13,6 @@
 body {
   width: 1440px;
   height: 1517px;
-  border: 1px solid rgb(0, 0, 0);
 }
 
 .header {
@@ -23,8 +22,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   text-align: center;
-  margin-left: 100px;
-  margin-top: 17px;
+  margin: 0 auto;
 }
 .header .header_nav {
   width: 409px;
@@ -89,6 +87,66 @@ nav a:hover {
 .header_logo--a {
   width: 41px;
   height: 48px;
+}
+
+.footer {
+  width: 1440px;
+  height: 209px;
+  background: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footer_logo {
+  width: 122px;
+  height: 39px;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.footer .footer_logo--K {
+  width: 32px;
+  height: 36px;
+}
+.footer .footer_logo--houseGroup {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  width: 27px;
+  height: 31px;
+}
+.footer .footer_logo--house {
+  width: 27px;
+  height: 31px;
+}
+.footer .footer_logo--door {
+  position: absolute;
+  width: 3px;
+  height: 9px;
+  top: 19px;
+  left: 19px;
+}
+.footer .footer_logo--s {
+  width: 23px;
+  height: 28px;
+}
+.footer .footer_logo--a {
+  width: 24px;
+  height: 28px;
+}
+.footer .footer_text {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34.22px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,5 @@
 import Header from "../../components/Header"
+import Footer from "../../components/Footer"
 
 function Home() {
     return (
@@ -6,6 +7,7 @@ function Home() {
         <div>
           <Header />
             <h1>Chez vous, partout et ailleurs</h1>
+          <Footer />
         </div>
     )
   }
