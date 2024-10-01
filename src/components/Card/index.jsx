@@ -1,7 +1,11 @@
 function Card() {
     return (
         <div className="card">
-            <p className="card_title">Titre de la location</p>
+            <div className="card_container">
+            </div> 
+            <div className="card_title">Titre de la location</div>
+        
+
         </div>
     )
 }
