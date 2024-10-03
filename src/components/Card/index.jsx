@@ -1,13 +1,12 @@
-function Card() {
+import { Link } from 'react-router-dom';
+
+const Card = ({ id, image, title }) => {
     return (
-        <div className="card">
-            <div className="card_container">
-            </div> 
-            <div className="card_title">Titre de la location</div>
-        
-
-        </div>
-    )
-}
-
-export default Card
+      <Link to={`/location/${id}`} id={id} className="card">
+        <div className="card_img" style={{ backgroundImage: `url(${image})` }}></div>
+        <p className="card_title">{title}</p>
+      </Link>
+    );
+  };
+  
+  export default Card;
