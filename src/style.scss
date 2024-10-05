@@ -24,9 +24,9 @@
 body {
     width: 1440px;
     height: 1517px;
-    margin-right: 40px;
     display: flex;
     justify-content: center;
+    margin-left: 40px;
   }
 
 // Home page
@@ -37,7 +37,6 @@ body {
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
-    //margin: 0 auto;
     margin-left: 40px;
   
 
@@ -113,7 +112,7 @@ nav a {
 }
 
 .footer {
-    width: 100%;
+    width: 1440px;
     height: 209px;
     background: rgba(0, 0, 0, 1);
     display: flex;
@@ -189,8 +188,8 @@ nav a {
     gap: 50px;
     border-radius: 25px;
     background: rgba(246, 246, 246, 1);
-    margin-left: 40px;
     padding: 60px;
+    margin-left: 40px;
 }
 .card {
     position: relative;
@@ -236,6 +235,7 @@ nav a {
     background-repeat: no-repeat;
     overflow: hidden;
     margin: 40px;
+    
    
   
     &::before {
@@ -261,4 +261,82 @@ nav a {
         line-height: 68px;
     }
   }
+
+//location page
+.location {
+    width: 1240px;
+    height: 643px;
+    margin-left: 40px;
+}
+.carousel-root {
+    width: 1240px;
+    height: 415px;
+    overflow: hidden;
+}
+.carousel.carousel-slider {
+    height: 415px;
+}
+.slider-wrapper.axis-horizontal {
+    height: 415px;
+}
+.slider.animated {
+    height: 415px;
+}
+.slide img {
+    width: 100%;
+    height: 415px;
+    object-fit: cover;
+}
+.thumbs-wrapper.axis-vertical {
+    display: none;
+}
+.control-dots {
+    display: none;
+}
+.carousel-status {
+    display: none;
+  
+}
+
+.carousel-container {
+    position: relative;
+        
+}
+      
+.custom-indicator {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+        
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 10;
+}
+.custom-prev-arrow,
+.custom-next-arrow {
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.custom-prev-arrow {
+  left: 10px;
+  width: 46px;
+  height: 79px;
+  background-color: transparent;
+}
+
+.custom-next-arrow {
+  right: 10px;
+  width: 46px;
+  height: 79px;
+  background-color: transparent;
+}
 
