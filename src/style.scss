@@ -19,6 +19,8 @@
     font-style: normal;
 }
 
+$main-color: rgba(255, 96, 96, 1);
+
 
 
 body {
@@ -265,13 +267,74 @@ nav a {
 //location page
 .location {
     width: 1240px;
-    height: 643px;
+    min-height: 100vh;
     margin-left: 40px;
+    flex-grow: 1;
+
+    .location_content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &-title h1 {
+            height: 51px;
+            font-family: Montserrat;
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 51px;
+            text-align: left;
+            color: $main-color;
+            margin-bottom: 0;
+        }
+
+        &-title p {
+        
+            height: 26px;
+            font-family: Montserrat;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 26px;
+            text-align: left;
+            margin-top: 0;
+        }
+
+        &-host {
+            display: flex;
+            flex-direction: row;
+            margin-top: 24px;
+            width: 167px;
+            height: 64px;
+             
+            
+        }
+    }
 }
+
+.location_content-host p {
+    width: 93px;
+    height: 52px;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: right;
+    color: $main-color;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-right: 5px;
+}
+.location_content-host img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    
+}
+
 .carousel-root {
     width: 1240px;
     height: 415px;
     overflow: hidden;
+    margin-top: 50px;
 }
 .carousel.carousel-slider {
     height: 415px;
@@ -324,19 +387,118 @@ nav a {
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-}
-
-.custom-prev-arrow {
-  left: 10px;
   width: 46px;
   height: 79px;
   background-color: transparent;
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
 .custom-next-arrow {
-  right: 10px;
-  width: 46px;
-  height: 79px;
-  background-color: transparent;
+    right: 10px;
+}
+.custom-prev-arrow {
+    left: 10px;
+}
+.location_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    &-rating {
+        margin-top: 0;
+    }
 }
 
+.tags_list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    gap: 5px;
+
+    &-item {
+        background-color: $main-color;
+        color: white;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        text-align: center;
+        min-width: 115px;
+        height: 25px;
+        border-radius: 25px;
+        vertical-align: middle;
+        padding: 5px 5px 0 5px;
+    }
+}
+.star {
+    font-size: 36px;
+    width: 25px;
+    height: 24px;
+    gap: 5px;
+    padding: 3px;
+    vertical-align: middle;
+    color: grey;
+  }
+  
+  .star.filled {
+    color: $main-color;
+  }
+
+  .collapse-container {
+    margin-top: 20px;
+    
+  }
+  
+  .collapse-title {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: $main-color;
+    width: 542px;
+    height: 52px;
+    border-radius: 10px;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    justify-content: space-between;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .collapse-content {
+    margin-top: 10px;
+  }
+  .description_content {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    width: 520px;
+    height: 182px;
+    margin-left: 20px;
+    margin-right: 40px;
+
+  }
+
+  .equipment_list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+  }
+  .details {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+  }
+  

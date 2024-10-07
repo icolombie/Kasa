@@ -5,6 +5,7 @@ import Location from '../pages/Location';
 import About from '../pages/About';
 
 const AppRoutes = () => (
+  
   <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/location/:id" element={<Location />} />
