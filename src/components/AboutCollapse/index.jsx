@@ -4,7 +4,7 @@ import downArrow from '../../assets/down-arrow.png';
 
 
 
-const Collapse = ({ title, children }) => {
+const AboutCollapse = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
@@ -12,8 +12,8 @@ const Collapse = ({ title, children }) => {
   };
 
   return (
-    <div className="collapse-container">
-      <h2 onClick={toggleCollapse} className='collapse-title'>
+    <div className="about_collapse-container">
+      <h2 onClick={toggleCollapse} className='about_collapse-title'>
         {title}
         <img
           src={isOpen ? downArrow : upArrow}
@@ -21,9 +21,9 @@ const Collapse = ({ title, children }) => {
           className="collapse-arrow"
         />
       </h2>
-      {isOpen && <div className="collapse-content">{children}</div>}
+      {isOpen && <div className="about_collapse-content">{children}</div>}
     </div>
   );
 };
 
-export default Collapse;
+export default AboutCollapse;

@@ -81,7 +81,7 @@ const Location = () => {
               <Collapse title="Description">
               <p className="description_content">{logement.description}</p>
               </Collapse>
-              <Collapse title="Equipements">
+              <Collapse title="Equipements" className="details_collapse-title">
               <ul className="equipment_list">
                 {logement.equipments.map((equipment, index) => (
                 <li key={index} className="equipment_list-item">{equipment}</li>
