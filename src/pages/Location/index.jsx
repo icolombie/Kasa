@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import ImageCarousel from "../../components/Carousel";
 import Collapse from "../../components/Collapse";
 import Footer from '../../components/Footer'
+import ErrorPage from "../../pages/ErrorPage";
 
 const Location = () => {
   const { id } = useParams();
@@ -20,7 +21,7 @@ const Location = () => {
   }, [id]);
 
   if (!logement) {
-    return <div>Loading...</div>;
+    return <ErrorPage />;
   }
 
   const formatAddress = (location) => {

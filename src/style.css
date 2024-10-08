@@ -515,4 +515,40 @@ nav a {
   align-items: center;
 }
 
+.error_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.error_content h1 {
+  font-family: Montserrat;
+  font-size: 288px;
+  font-weight: 700;
+  line-height: 411px;
+  text-align: center;
+  color: rgb(255, 96, 96);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.error_content p {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 51px;
+  text-align: left;
+  color: rgb(255, 96, 96);
+  margin-top: 0;
+  margin-bottom: 100px;
+}
+.error_content a {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
+  color: black;
+  margin-bottom: 60px;
+}
+
 /*# sourceMappingURL=style.css.map */
