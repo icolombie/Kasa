@@ -6,23 +6,42 @@ import Collapse from "../../components/Collapse";
 import Footer from '../../components/Footer'
 import ErrorPage from "../../pages/ErrorPage";
 
+
 const Location = () => {
   const { id } = useParams();
   const [logement, setLogement] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     fetch('/logements.json')
       .then(response => response.json())
       .then(data => {
         const foundLogement = data.find(logement => logement.id === id);
-        setLogement(foundLogement);
+        if (foundLogement) {
+          setLogement(foundLogement);
+        } else {
+          setHasError(true);
+        }
+        setIsLoading(false);
       })
-      .catch(error => console.error('Error fetching data:', error));
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        setHasError(true);
+        setIsLoading(false);
+      });
   }, [id]);
 
-  if (!logement) {
+  if (isLoading) {
+    return <p>Chargement...</p>;
+  }
+
+  if (hasError) {
     return <ErrorPage />;
   }
+
+  
+  
 
   const formatAddress = (location) => {
     const [region, city] = location.split(' - ');
@@ -51,7 +70,7 @@ const Location = () => {
 
     return (
      
-            <div>
+            <div className="location_page">
               <Header />
               <div className="location">
               

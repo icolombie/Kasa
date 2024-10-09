@@ -24,11 +24,17 @@ $main-color: rgba(255, 96, 96, 1);
 
 
 body {
-    width: 1440px;
-    height: 1517px;
+    width: 1440px; 
+    
+    @media (max-width: 599px) {
+        width: 100%;
+        
+  }
+}
+  .page_content {
     display: flex;
-    justify-content: center;
-    margin-left: 40px;
+    flex-direction: column;
+    align-items: center;
   }
 
 // Home page
@@ -39,19 +45,33 @@ body {
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
-    margin-left: 40px;
+
+        @media (max-width: 599px) {
+            width: 86%;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 10px;
+        }
   
 
     .header_nav {
         width: 409px;
         height: 34px;
         margin-top: 17px;
+
+        @media (max-width: 599px) {
+            width: 120%;
+            text-align: left;
+            display: flex;
+            flex-direction: row;
+
+            
+        }
     }
             
 }
 nav a {
-    width: 136px;
-    height: 34px;
+    color: black;
     font-family: Montserrat;
     font-size: 24px;
     font-weight: 500;
@@ -59,6 +79,13 @@ nav a {
     text-align: right;
     margin-left: 60px;
     text-decoration: none;
+
+    @media (max-width: 599px) {
+        text-transform: uppercase;
+        margin-left: 10px;
+        font-size: 12px;
+        padding-left: 0px;
+    }     
 }
 
 .active-link {
@@ -119,6 +146,10 @@ nav a {
     justify-content: center;
     align-items: center;
     margin-top: 40px;
+
+    @media (max-width: 599px) {
+        width: 100%;
+    }
     
         
             .footer_logo {
@@ -177,6 +208,12 @@ nav a {
                 text-align: center;
                 color: rgba(255, 255, 255, 1);
                 margin-top: 20px;
+
+                @media (max-width: 599px) {
+                    margin-top: 0;
+                    height: 46px;
+                    width: 200px;
+                }
             }
         }
 
@@ -188,7 +225,13 @@ nav a {
     border-radius: 25px;
     background: rgba(246, 246, 246, 1);
     padding: 60px;
-    margin-left: 40px;
+    
+    @media (max-width: 599px) {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 .card {
     position: relative;
@@ -196,6 +239,10 @@ nav a {
     height: 340px;
     border-radius: 10px 10px 10px 10px;
     overflow: hidden;
+    @media (max-width: 599px) {
+        width: 86%;
+    }    
+    
     
         &_title {
             font-family: Montserrat;
@@ -235,7 +282,14 @@ nav a {
     overflow: hidden;
     margin: 40px;
     
-   
+    @media (max-width: 599px) {
+        width: 89%;
+        height: 86%;
+        justify-content: left;
+        align-items: center;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
   
     &::before {
         content: '';
@@ -258,15 +312,34 @@ nav a {
         font-size: 48px;
         font-weight: 700;
         line-height: 68px;
+
+        @media (max-width: 599px) {
+            text-align: left;
+            vertical-align: middle;
+            width: 90%;
+            height: 120px;
+            font-size: 30px;
+            padding: 0;
+            line-height: 30px;
+            margin-top: 50px;
+            margin-left: 20px;
+        }
     }
+
   }
 
 //location page
+.location_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .location {
     width: 1240px;
     min-height: 100vh;
-    margin-left: 40px;
     flex-grow: 1;
+    
+    
 
     .location_content {
         display: flex;
@@ -501,6 +574,7 @@ nav a {
   .about {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
   }
   .about_content {

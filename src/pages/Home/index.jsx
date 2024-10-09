@@ -17,7 +17,7 @@ export default function Home() {
 
     return (
         
-        <div>
+        <div className="page_content">
           <Header />
           <Banner imageUrl={Image1} text="Chez vous, partout et ailleurs" />
           <div className="gallery">
