@@ -1,0 +1,37 @@
+.banner.style2 {
+  color: transparent;
+}
+.collapse-title.style2 {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 96, 96);
+  width: 1023px;
+  height: 52px;
+  border-radius: 10px;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+  justify-content: space-between;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (max-width: 599px) {
+  .banner.style2 {
+    width: 90%;
+  }
+  .collapse-title.style2 {
+    width: 90%;
+  }
+  .collapse-container {
+    width: 100%;
+  }
+  .about_content {
+    width: 90%;
+  }
+}
+.collapse-container {
+  align-items: center;
+}

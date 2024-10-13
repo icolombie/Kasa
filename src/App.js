@@ -1,8 +1,8 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import AppRoutes from './routes/index';
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRoutes from "./routes/index";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -14,22 +14,19 @@ const ScrollToTop = () => {
   return null;
 };
 
-
 function App() {
   useEffect(() => {
-    document.documentElement.setAttribute('translate', 'no');
+    document.documentElement.setAttribute("translate", "no");
   }, []);
 
   return (
     <Router>
-    <ScrollToTop />
+      <ScrollToTop />
       <div>
-      <AppRoutes />
+        <AppRoutes />
       </div>
-  </Router>
-
+    </Router>
   );
 }
-
 
 export default App;

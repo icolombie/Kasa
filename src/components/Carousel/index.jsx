@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import next from "../../assets/next.png"
-import prev from "../../assets/prev.png"
+import React, { useState } from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import next from "../../assets/next.png";
+import prev from "../../assets/prev.png";
 
 const CustomPrevArrow = ({ onClickHandler }) => (
   <button type="button" onClick={onClickHandler} className="custom-prev-arrow">
-    <img src={prev} alt='Previous' />
+    <img src={prev} alt="Previous" />
   </button>
 );
 
 const CustomNextArrow = ({ onClickHandler }) => (
   <button type="button" onClick={onClickHandler} className="custom-next-arrow">
-    <img src={next} alt='Next' />
+    <img src={next} alt="Next" />
   </button>
 );
 
@@ -40,8 +40,16 @@ const ImageCarousel = ({ images }) => {
         showStatus={false}
         selectedItem={currentIndex}
         onChange={handleSlideChange}
-        renderArrowPrev={() => images.length > 1 && <CustomPrevArrow onClickHandler={handlePrevClick} />}
-        renderArrowNext={() => images.length > 1 && <CustomNextArrow onClickHandler={handleNextClick} />}
+        renderArrowPrev={() =>
+          images.length > 1 && (
+            <CustomPrevArrow onClickHandler={handlePrevClick} />
+          )
+        }
+        renderArrowNext={() =>
+          images.length > 1 && (
+            <CustomNextArrow onClickHandler={handleNextClick} />
+          )
+        }
       >
         {images.map((image, index) => (
           <div key={index}>
@@ -50,7 +58,9 @@ const ImageCarousel = ({ images }) => {
         ))}
       </Carousel>
       {images.length > 1 && (
-      <p className="custom-indicator">{`${currentIndex + 1}/${images.length}`}</p>
+        <p className="custom-indicator">{`${currentIndex + 1}/${
+          images.length
+        }`}</p>
       )}
     </div>
   );

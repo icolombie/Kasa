@@ -1,8 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-const Banner = ({ imageUrl, text }) => (
-  <div className="banner" style={{ backgroundImage: `url(${imageUrl})` }}>
+const Banner = ({ imageUrl, text, styleType }) => (
+  <div
+    className={`banner ${styleType}`}
+    style={{ backgroundImage: `url(${imageUrl})` }}
+  >
     {text && <div className="banner-text">{text}</div>}
   </div>
 );
@@ -10,7 +13,7 @@ const Banner = ({ imageUrl, text }) => (
 Banner.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   text: PropTypes.string,
+  styleType: PropTypes.string,
 };
-
 
 export default Banner;
