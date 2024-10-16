@@ -1,16 +1,16 @@
 import Header from "../../components/Header";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import ImageCarousel from "../../components/Carousel";
 import Collapse from "../../components/Collapse";
 import Footer from "../../components/Footer";
-import ErrorPage from "../../pages/ErrorPage";
+
 
 const Location = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [logement, setLogement] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     fetch("/logements.json")
@@ -20,25 +20,21 @@ const Location = () => {
         if (foundLogement) {
           setLogement(foundLogement);
         } else {
-          setHasError(true);
+          navigate("/error");
         }
         setIsLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
-        setHasError(true);
+        navigate("/error");
         setIsLoading(false);
       });
-  }, [id]);
+  }, [id, navigate]);
 
   if (isLoading) {
     return <p>Chargement...</p>;
   }
-
-  if (hasError) {
-    return <ErrorPage />;
-  }
-
+  
   const formatAddress = (location) => {
     const [region, city] = location.split(" - ");
     if (city.startsWith("Paris")) {
@@ -53,9 +49,7 @@ const Location = () => {
     return { formattedAddress: `${city}, ${region}`, city };
   };
 
-  const { formattedAddress, city, arrondissement } = formatAddress(
-    logement.location
-  );
+  const { formattedAddress, city, arrondissement } = formatAddress(logement.location);
 
   const renderStars = (rating) => {
     const stars = [];
@@ -117,7 +111,6 @@ const Location = () => {
           </Collapse>
         </div>
       </div>
-
       <Footer />
     </div>
   );

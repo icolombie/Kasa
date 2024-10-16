@@ -24,14 +24,20 @@
   }
   .collapse-title.style2 {
     width: 90%;
+    height: 30px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .collapse-title.style2 img {
+    width: 16px;
+    height: 9px;
   }
   .collapse-container {
     width: 100%;
+    align-items: center;
   }
   .about_content {
     width: 90%;
   }
 }
-.collapse-container {
-  align-items: center;
-}
+
