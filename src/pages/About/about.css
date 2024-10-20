@@ -17,6 +17,7 @@
   color: white;
   padding-left: 20px;
   padding-right: 20px;
+  margin-bottom: 0;
 }
 @media (max-width: 599px) {
   .banner.style2 {

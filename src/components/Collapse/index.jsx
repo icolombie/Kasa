@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import upArrow from "../../assets/up-arrow.png";
 import downArrow from "../../assets/down-arrow.png";
 import PropTypes from "prop-types";
 
 const Collapse = ({ title, children, styleType }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsVisible(true);
+    } else {
+      const timer = setTimeout(() => setIsVisible(false), 300);
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen]);
 
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
@@ -20,7 +30,11 @@ const Collapse = ({ title, children, styleType }) => {
           className="collapse-arrow"
         />
       </h2>
-      {isOpen && <div className="collapse-content">{children}</div>}
+      {isVisible && (
+        <div className={`collapse-content ${isOpen ? 'open' : 'close'}`}>
+          <div className="collapse-text">{children}</div>
+        </div>
+      )}
     </div>
   );
 };
